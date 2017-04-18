@@ -6,4 +6,4 @@ cd $(dirname "$0")
 
 # Start our application...
 
-nosetests -v ../get_ip/tests.py
+nosetests -v ../hello/tests.py

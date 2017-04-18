@@ -1,20 +1,23 @@
-# Wercker GKE Demo: Get IP address HTTP API
+# Wercker Kubernetes Demo: Hello!
 
-A simple Python application that uses the Bottle framework to serve a JSON encoded client IP address of a user who makes a GET request to /.
+A simple Python application that uses the Bottle framework to serve a custom
+message over HTTP.
 
-Used as an example application for a tutorial on Wercker I am writing.
+This application is used to showcase how easy it is to deploy to Kubernetes
+using Wercker.
 
 ```
-usage: get_ip.py [-h] hostname port
+usage: hello.py [-h] hostname port messagefile
 
-HTTP API for returning a visitor's IP address.
+Serve a hello message over HTTP.
 
 positional arguments:
-  hostname    The host IP to listen on.
-  port        The port to listen on.
+  hostname     The host IP to listen on.
+  port         The port to listen on.
+  messagefile  A file that contains the message to display
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help   show this help message and exit
 ```
 
 Requires `Python 2` `pip` & `virtualenv` to run.

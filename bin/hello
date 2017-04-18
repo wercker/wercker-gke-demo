@@ -5,4 +5,4 @@ cd $(dirname "$0")
 . ./activate_env
 
 # Start our application...
-python ../get_ip/get_ip.py "$@"
+python ../hello/hello.py "$@"

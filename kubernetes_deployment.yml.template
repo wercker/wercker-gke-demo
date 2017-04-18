@@ -5,24 +5,27 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: get-ip
+  name: hello
   labels:
     commit: ${WERCKER_GIT_COMMIT}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: get-ip
+      app: hello
   template:
     metadata:
       labels:
-        app: get-ip
+        app: hello
         commit: ${WERCKER_GIT_COMMIT}
     spec:
       containers:
-      - name: get-ip-server
-        image: eu.gcr.io/wercker-tutorials/get-ip:${WERCKER_GIT_COMMIT}
+      - name: hello-server
+        image: ${DOCKERHUB_REPOSITORY}:${WERCKER_GIT_COMMIT}
+        imagePullPolicy: Always
         ports:
-        - name: get-ip-server
+        - name: hello-server
           containerPort: 8080
           protocol: TCP
+      imagePullSecrets:
+        - name: regsecret
