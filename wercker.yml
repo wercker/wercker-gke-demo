@@ -1,4 +1,4 @@
-# This Pipeline is run whenever a new git commit is pushed.
+build# This Pipeline is run whenever a new git commit is pushed.
 build:
     box: python:2.7
     steps:
@@ -12,7 +12,7 @@ build:
     - create-file:
         name: Create a message file.
         filename: hello/message.cfg
-        overwrite: true
+        overwrite: false
         content: Hi! This message will be written to the message config file!
 
     - script:
