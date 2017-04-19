@@ -13,7 +13,7 @@ build:
         name: Create a message file.
         filename: hello/message.cfg
         overwrite: true
-        content: Hi! This message will be written to the message config file!
+        content: Hi! I was forced to change this message for the purpose of a demo 
 
     - script:
         # Pass tested soruce on to the image push.
